@@ -7,6 +7,8 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.room)
 }
 
 kotlin {
@@ -87,9 +89,20 @@ android {
     }
     dependencies {
         debugImplementation(compose.uiTooling)
+
     }
+
+}
+room {
+    schemaDirectory("$projectDir/schemas")
 }
 dependencies {
     implementation("androidx.core:core-ktx:+")
+    add("kspCommonMainMetadata", libs.room.compiler)
+//    add("kspAndroid", libs.room.compiler)
+//    add("kspAndroid", libs.room.compiler)
+//    add("kspIosX64", libs.room.compiler)
+//    add("kspIosArm64", libs.room.compiler)
+//    add("kspIosSimulatorArm64", libs.room.compiler)
 }
 
