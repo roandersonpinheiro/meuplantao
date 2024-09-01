@@ -39,6 +39,7 @@ kotlin {
             implementation(libs.koin.core)
             implementation(libs.room.runtime.android)
             implementation(libs.koin.compose)
+            implementation(libs.koin.android)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -49,13 +50,16 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
+            implementation(libs.androidx.core.ktx)
             implementation(libs.navigation.compose)
             implementation(libs.viewmodel.compose)
+
 
             implementation(libs.kottie.animation)
             implementation(libs.kotlinx.datetime)
             implementation(libs.room.runtime)
             implementation(libs.sqlite.bundled)
+
 
             implementation(libs.koin.core)
             implementation(libs.koin.compose)
@@ -107,6 +111,7 @@ room {
 }
 dependencies {
     implementation("androidx.core:core-ktx:+")
+    implementation("androidx.core:core-ktx:+")
     add("kspCommonMainMetadata", libs.room.compiler)
 //    add("kspAndroid", libs.room.compiler)
 //    add("kspAndroid", libs.room.compiler)
@@ -114,9 +119,9 @@ dependencies {
 //    add("kspIosArm64", libs.room.compiler)
 ////    add("kspIosSimulatorArm64", libs.room.compiler)
 }
-tasks.withType<org.jetbrains.kotlin.gradle.dsl.KotlinCompile<*>>().configureEach {
-    if (name != "kspCommonMainKotlinMetadata" ) {
-        dependsOn("kspCommonMainKotlinMetadata")
-    }
-}
+//tasks.withType<org.jetbrains.kotlin.gradle.dsl.KotlinCompile<*>>().configureEach {
+//    if (name != "kspCommonMainKotlinMetadata" ) {
+//        dependsOn("kspCommonMainKotlinMetadata")
+//    }
+//}
 
