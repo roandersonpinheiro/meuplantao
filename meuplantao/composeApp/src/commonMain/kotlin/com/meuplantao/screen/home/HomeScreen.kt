@@ -7,13 +7,12 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import org.koin.compose.viewmodel.koinViewModel
 import org.koin.core.annotation.KoinExperimentalAPI
 
 @OptIn(KoinExperimentalAPI::class)
 @Composable
 fun HomeScreen(navigateToDetails: () -> Unit) {
-    val viewModel = koinViewModel<HomeViewModel>()
+   // val viewModel = koinViewModel<HomeViewModel>()
 
     Box(
         modifier = Modifier.fillMaxSize(),
