@@ -1,5 +1,11 @@
 package com.meuplantao
 
 import androidx.compose.ui.window.ComposeUIViewController
-
-fun MainViewController() = ComposeUIViewController { App() }
+import com.meuplantao.di.initKoin
+fun MainViewController() = ComposeUIViewController(
+    configure = {
+        initKoin()
+    }
+) {
+    App()
+}
