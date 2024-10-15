@@ -35,9 +35,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.meuplantao.screen.detail.Patterns
-import com.meuplantao.screen.detail.contrastColor
-import com.meuplantao.screen.detail.toColor
+import com.meuplantao.util.extensions.Patterns
+import com.meuplantao.util.extensions.contrastColor
+import com.meuplantao.util.extensions.toColor
 
 
 /**
